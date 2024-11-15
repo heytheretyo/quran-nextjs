@@ -23,9 +23,9 @@ export default async function Page({
 
   return (
     <div className="flex items-center justify-center">
-      <div className="flex flex-col  space-y-6 text-right p-20">
+      <div className="flex flex-col space-y-4  text-right p-10 lg:px-72 lg:space-y-7">
         {Object.values(verses).map((val: string, id) => (
-          <li className="font-semibold text-4xl" key={id}>
+          <li className="font-semibold text-4xl  leading-relaxed" key={id}>
             {val}
           </li>
         ))}

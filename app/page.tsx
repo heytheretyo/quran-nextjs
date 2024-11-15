@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "./components/link";
 import { surahs as data } from "./data";
 import { useState, useEffect } from "react";
 
@@ -48,11 +48,11 @@ export default function Home() {
 
         <div className="grid grid-cols-3 gap-2 lg:grid-cols-4">
           {filteredSurahs.length > 0 ? (
-            filteredSurahs.map((v, i) => (
+            filteredSurahs.map((v) => (
               <Link
                 prefetch={true}
-                key={i}
-                href={`surah/${i + 1}`}
+                key={parseInt(v.index)}
+                href={`surah/${parseInt(v.index)}`}
                 className="hover:underline container p-4 rounded-lg border-2 border-black hover:bg-black/5"
               >
                 <p>{v.title}</p>
